@@ -12,11 +12,21 @@
             box-sizing: border-box;
         }
 
+        .homeImgText {
+            color: white;
+            position: absolute;
+            top: 30%;
+            left: 0;
+            text-align: center;
+            width: 100%;
+        }
+
         .but1 {
             background-color: crimson;
             padding: 10px 20px;
             display: inline-block;
             text-align: center;
+            margin-top: 10px;
         }
 
         .but2 {
@@ -69,41 +79,58 @@
             flex-wrap: wrap;
         }
 
-        .box1, .box2 {
+        .box1,
+        .box2 {
             flex: 33%;
             padding: 30px;
         }
-        
+
         @media (max-width: 900px) {
             .box1 {
                 flex: 100%;
                 margin: auto;
             }
+
             .pad {
                 padding: 30px 20px;
             }
         }
+
+        #box2 {
+            margin-right: 30px;
+        }
+
         @media (max-width: 1200px) {
             .box2 {
                 flex: 100%;
+            }
+
+            #box2 {
                 margin: auto;
             }
+
             .pad {
                 padding: 30px 30px;
             }
         }
-    </style>
 
+        .img {
+            background-size: cover;
+            background-position: center center;
+            height: 2in;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <section>
         <div style="position: relative;" style="text-align: center;">
             <img src="download.jpg" alt="" width="100%" height="500px">
-            <div style="position: absolute; top: 150px; left: 40%; color: white; text-align: center;">
+            <div class="homeImgText">
                 <span class="fas fa-calendar"></span>
-                <h1><b>SIMPLE CSS TEMPLATE</b></h1>
-                <h3><i>WELCOME TO OUR CHURCH</i></h3>
+                <h1 style="font-size: 40px;"><b>SIMPLE CSS TEMPLATE</b></h1>
+                <h1><i>WELCOME TO OUR CHURCH</i></h1>
                 <div class="but1">JOIN WITH US</div>
             </div>
         </div>
@@ -162,27 +189,27 @@
 
     <section>
         <div class="container pad" style="padding-top: 80px; padding-bottom: 80px; background-color: lightgray;">
-            <div class="box2" style="background-color: white; padding: 30px 50px; margin-right: 30px;">
+            <div class="box2" id="box2" style="background-color: white; padding: 30px 50px;">
                 <h2>Welcome to our Church</h2>
                 <p><span class="fas fa-calendar"></span> Monday, 10:00 Am - Friday, 10:00 Am</p>
                 <p style="color: red">St. Pearl Church</p>
                 <p>510 102th Ave. NE, Bellevue, WA 68005</p>
             </div>
             <div class="box2" style="flex: 10%; color: white; background-color: crimson;">
-                <div class="clearfix" style="margin: auto">
-                    <div class="vl" style="width: 25%; border-left: 0px;">
+                <div class="container">
+                    <div class="vl box1" style="flex: 25%; border-left: 0px;">
                         <h2 style="font-size:xx-large;">200</h2>
                         <p>Days</p>
                     </div>
-                    <div class="vl" style="width: 25%;">
+                    <div class="vl box1" style="flex: 25%;">
                         <h2 style="font-size:xx-large;">16</h2>
                         <p>Hours</p>
                     </div>
-                    <div class="vl" style="width: 25%;">
+                    <div class="vl box1" style="flex: 25%;">
                         <h2 style="font-size:xx-large;">42</h2>
                         <p>Minutes</p>
                     </div>
-                    <div class="vl" style="width: 25%;">
+                    <div class="vl box1" style="flex: 25%;">
                         <h2 style="font-size:xx-large;">40</h2>
                         <p>Seconds</p>
                     </div>
@@ -191,11 +218,12 @@
         </div>
     </section>
 
-    <section style="text-align: center;">
-        <h2 style="padding-top: 30px;"><b>STATEMENT OF FAITH</b></h2>
+    <section>
+        <h2 style="padding-top: 30px; text-align: center;"><b>OUR EVENTS</b></h2>
         <div class="clearfix pad">
             <div class="column">
-                <h4><b>What We Believe</b></h4>
+                <img class="img" src="OIP (1).jpg" alt="">
+                <h3><b>Morning Gathering</b></h3>
                 <p>Lorem Ipsum is simply dummy text
                     of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
                     ever
@@ -204,7 +232,8 @@
                     book.</p>
             </div>
             <div class="column">
-                <h4><b>What We Are</b></h4>
+                <img class="img" src="OIP (2).jpg" alt="">
+                <h3><b>Spirit And Truth</b></h3>
                 <p>Lorem Ipsum is simply dummy text
                     of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
                     ever
@@ -213,7 +242,8 @@
                     book.</p>
             </div>
             <div class="column">
-                <h4><b>How We Live</b></h4>
+                <img class="img" src="OIP.jpg" alt="">
+                <h3><b>Sunday School</b></h3>
                 <p>Lorem Ipsum is simply dummy text
                     of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
                     ever
